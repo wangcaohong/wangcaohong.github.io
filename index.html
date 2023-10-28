@@ -1,24 +1,46 @@
 <html>
-    <body class="main">
-        <div class="content">
-            <p>Hi!</p>
-            <p>1'm Caohong Wang;</p>
-            <p>A full 5tack developer;</p>
-            <p>Nice 2 m33t U!</p>
-        </div>
-    </body>
+  <body class="main">
+    <div class="content">
+      <span>Hi!</span>
+      <p>1'm Caohong Wang;</p>
+      <p>A full 5tack developer;</p>
+      <div class="last-line">
+        <div>Nice 2 m33t U!</div>
+        <div class="block"></div>
+      </div>
+    </div>
+  </body>
 </html>
 <style>
-    .main{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+  .main {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    font-weight: bold;
+    font-size: 64px;
+    color: #0f0;
+  }
+
+  .last-line {
+    display: flex;
+  }
+
+  @keyframes blink {
+    50% {
+      background-color: transparent;
     }
-    .content {
-        font-weight: bold;
-        font-size: 64px;
-    }
+  }
+
+  .block {
+    background-color: #0f0;
+    width: 5%;
+    height: auto;
+    animation: blink 1s ease-out infinite;
+  }
 </style>
