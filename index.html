@@ -10,12 +10,12 @@
       </div>
     </div>
     <div class="right-content">
-      <div style="padding: 10px">
-        <h1>What do I do?</h1>
+      <div style="padding-left: 50px">
+        <p style="font-weight: bold">What do I do?</p>
         <p>System Architecture;</p>
         <p>Networking and security;</p>
         <p>No one in this house can touch me on that.</p>
-        <p>OK, It's a meme.</p>
+        <p>OK, It's just a meme.</p>
       </div>
     </div>
   </body>
@@ -29,6 +29,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       align-items: center;
+      font-size: 32px;
     }
   }
 
@@ -40,29 +41,31 @@
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
+      font-size: 64px;
     }
   }
 
   .left-content {
     width: 100%;
     font-weight: bold;
-    font-size: 64px;
     color: #0f0;
+    text-align: center;
+    margin: 50px;
   }
 
   .right-content {
     width: 100%;
-    margin: 10px;
-    padding: 10px;
     height: auto;
+    padding: 10px;
     color: white;
     background: rgba(255, 255, 255, 0.1); /* 白色渐变 */
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
   }
 
   .last-line {
     display: flex;
+    justify-content: center;
   }
 
   @keyframes blink {
@@ -73,7 +76,7 @@
 
   .block {
     background-color: #0f0;
-    width: 32px;
+    width: 2%;
     height: auto;
     animation: blink 1s ease-out infinite;
   }
