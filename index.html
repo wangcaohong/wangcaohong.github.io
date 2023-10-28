@@ -1,6 +1,6 @@
 <html>
   <body class="main">
-    <div class="content">
+    <div class="left-content">
       <span>Hi!</span>
       <p>1'm Caohong Wang;</p>
       <p>A full 5tack developer;</p>
@@ -9,22 +9,56 @@
         <div class="block"></div>
       </div>
     </div>
+    <div class="right-content">
+      <div style="padding: 10px">
+        <h1>What do I do?</h1>
+        <p>System Architecture;</p>
+        <p>Networking and security;</p>
+        <p>No one in this house can touch me on that.</p>
+        <p>OK, It's a meme.</p>
+      </div>
+    </div>
   </body>
 </html>
 <style>
-  .main {
-    background-color: black;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (min-width: 1025px) {
+    .main {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
   }
-  .content {
+
+  @media only screen and (max-width: 1025px) {
+    .main {
+      background-color: black;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  .left-content {
+    width: 100%;
     font-weight: bold;
     font-size: 64px;
     color: #0f0;
+  }
+
+  .right-content {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    color: white;
+    background: rgba(255, 255, 255, 0.1); /* 白色渐变 */
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
   }
 
   .last-line {
@@ -39,7 +73,7 @@
 
   .block {
     background-color: #0f0;
-    width: 5%;
+    width: 32px;
     height: auto;
     animation: blink 1s ease-out infinite;
   }
