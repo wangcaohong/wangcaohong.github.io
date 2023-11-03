@@ -9,8 +9,8 @@
         <div class="block"></div>
       </div>
     </div>
-    <div class="right-content">
-      <div style="padding-left: 50px">
+    <div class="right">
+      <div class="right-content">
         <p style="font-weight: bold">What do I do?</p>
         <p>System Architecture;</p>
         <p>Networking and security;</p>
@@ -21,6 +21,11 @@
   </body>
 </html>
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   @media only screen and (min-width: 1025px) {
     .main {
       background-color: black;
@@ -53,9 +58,16 @@
     margin: 50px;
   }
 
-  .right-content {
+  .right {
+    display: flex;
     width: 100%;
+    justify-content: center;
+  }
+
+  .right-content {
+    width: 80%;
     height: auto;
+    padding: 20px;
     margin: 20px;
     color: white;
     background: rgba(255, 255, 255, 0.05); /* 白色渐变 */
