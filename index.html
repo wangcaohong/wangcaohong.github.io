@@ -100,7 +100,7 @@
           width: 0;
         }
         to {
-          width: 350px;
+          width: 280px;
         }
       }
 
@@ -248,41 +248,31 @@
         z-index: 101;
       }
 
-      .logo svg text {
-        stroke-dasharray: 100;
-        stroke-dashoffset: 100;
+      .logo svg path {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: drawLogo 2s ease forwards;
       }
 
-      .logo svg text tspan {
-        animation: drawLetter 0.5s ease forwards;
-        opacity: 0;
-      }
-
-      .logo svg text tspan:nth-child(1) {
-        animation-delay: 0s;
-      }
-      .logo svg text tspan:nth-child(2) {
-        animation-delay: 0.5s;
-      }
-      .logo svg text tspan:nth-child(3) {
-        animation-delay: 1s;
-      }
-      .logo svg text tspan:nth-child(4) {
-        animation-delay: 1.5s;
-      }
-      .logo svg text tspan:nth-child(5) {
-        animation-delay: 2s;
-      }
-
-      @keyframes drawLetter {
-        0% {
-          stroke-dashoffset: 100;
-          opacity: 0;
-        }
-        100% {
+      @keyframes drawLogo {
+        to {
           stroke-dashoffset: 0;
-          opacity: 1;
         }
+      }
+
+      .logo svg path {
+        fill: none;
+        stroke: url(#gradient);
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101;
       }
 
       @media (max-width: 768px) {
@@ -375,9 +365,53 @@
             width: 0;
           }
           to {
-            width: 290px;
+            width: 230px;
           }
         }
+      }
+
+      .letter {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        opacity: 0;
+      }
+
+      .letter:nth-child(1) {
+        animation: drawLetter 0.5s ease forwards;
+      }
+
+      .letter:nth-child(2) {
+        animation: drawLetter 0.5s ease forwards 0.5s;
+      }
+
+      .letter:nth-child(3) {
+        animation: drawLetter 0.5s ease forwards 1s;
+      }
+
+      .letter:nth-child(4) {
+        animation: drawLetter 0.5s ease forwards 1.5s;
+      }
+
+      .letter:nth-child(5) {
+        animation: drawLetter 0.5s ease forwards 2s;
+      }
+
+      @keyframes drawLetter {
+        0% {
+          stroke-dashoffset: 100;
+          opacity: 0;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          opacity: 1;
+        }
+      }
+
+      .logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 101;
       }
     </style>
   </head>
@@ -400,13 +434,12 @@
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="logo-text"
         >
-          <tspan>M</tspan>
-          <tspan>a</tspan>
-          <tspan>c</tspan>
-          <tspan>r</tspan>
-          <tspan>o</tspan>
+          <tspan class="letter" dx="0">m</tspan>
+          <tspan class="letter" dx="5">a</tspan>
+          <tspan class="letter" dx="5">c</tspan>
+          <tspan class="letter" dx="5">r</tspan>
+          <tspan class="letter" dx="5">o</tspan>
         </text>
       </svg>
     </div>
@@ -430,7 +463,7 @@
       <div class="floating-shapes"></div>
       <div class="hero-content">
         <h1>Welcome to Macro Blog</h1>
-        <p>Exploring the future of the internet world.</p>
+        <p>Making the world a better place.</p>
       </div>
     </section>
 
